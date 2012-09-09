@@ -1,0 +1,12 @@
+<div data-role="header">
+  <h1>Lists</h1>
+  <%= link_to 'Add', new_shopping_list_path, "data-icon" => "plus", "class" => "ui-btn-right" %>
+</div>
+
+<div data-role="content">
+  <ul data-role="listview">
+    <% @shopping_lists.each do | shopping_list| %>
+      <li> <%= shopping_list.name %> </li>
+    <% end %>
+  </ul>
+</div>
